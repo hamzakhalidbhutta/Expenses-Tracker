@@ -25,9 +25,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm i
-    - run: npm run build
+
+    - name: Create project build
+      run: npm run build
+
     - name: Installing Surge
       run: npm install --global surge
+      
     - name: Delopying using surge
       run: surge ./build expensetracker-hkbenvision.surge.sh --token ${{ secrets.SURGE_TOKEN }}
