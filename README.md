@@ -1,2 +1,2 @@
 # Expenses Tracker
- This repo contains the expenses tracker project
+ This repo contains the expenses tracker project created in Reactjs.
