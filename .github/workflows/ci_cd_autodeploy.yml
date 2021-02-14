@@ -1,12 +1,11 @@
 # This workflow will be triggred when ever change will be committed and pushed to the repo
-# Then automatically will be deployed on expensetracker-hkbenvision.surge.sh 
+# Then automatically will be deployed on expensetracker-hkbenvision.surge.sh
+
 name: Expenses Tracking CI CD Development
 
 on:
   push:
     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
 
 jobs:
   build:
@@ -16,7 +15,7 @@ jobs:
     strategy:
       matrix:
         # node-version: [10.x, 12.x, 14.x, 15.x]
-        node-version: 12
+        node-version: [12.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -31,6 +30,6 @@ jobs:
 
     - name: Installing Surge
       run: npm install --global surge
-      
+
     - name: Delopying using surge
       run: surge ./build expensetracker-hkbenvision.surge.sh --token ${{ secrets.SURGE_TOKEN }}
