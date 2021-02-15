@@ -1,7 +1,7 @@
 import React from "react";
-
-const App = () => {
-  return (<div> Surge Deployment Check </div>);
+import Home from "./pages/Home";
+const App = (props) => {
+  return (<><Home /></>);
 };
 
 export default App;
