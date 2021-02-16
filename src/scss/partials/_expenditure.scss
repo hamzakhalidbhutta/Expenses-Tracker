@@ -1,0 +1,36 @@
+.expenditureContainer {
+background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;  
+
+}
+
+.expenditureContainer> div {
+
+  flex:1;
+  text-align: center;
+}
+.expenditureContainer > div:nth-child(1){
+
+  border-right: 1px solid #dedede;
+}
+.expenditureContainer > div:nth-child(1) > p{
+  color: #2ecc71;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
